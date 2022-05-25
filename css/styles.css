@@ -57,13 +57,25 @@ body {
     /* background-color: tomato; */ 
 }
 
-/* .navigation */
+.flex {
+    display: flex;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
 }
 
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
 
+.flex-spacebetween-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* ============================= Контейнер для ФОНА в ГЕРОЙ (overlay) ============================= */
 .overlay {
     max-width: 1600px;
@@ -314,8 +326,8 @@ img {
 }
 
 
-/* ====== Стилизация заголовка h1 в ГЕРОЙ (hero-title) ===== */
-.hero-title {
+/* ====== Стилизация заголовка h1 в ГЕРОЙ (hero__title) ===== */
+.hero__title {
     width: 696px;
     margin-top: 0;
     margin-left: auto;
@@ -336,8 +348,8 @@ img {
 }
 
 
-/* ========== Стилизация кнопки в ГЕРОЙ (hero-button) ========== */
-.hero-button {
+/* ========== Стилизация кнопки в ГЕРОЙ (button-main) ========== */
+.button-main {
     display: inline-block;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -361,8 +373,8 @@ img {
 }
 
 /* =============  Hover & Focus на кнопке в ГЕРОЙ ============= */
-.hero-button:hover,
-.hero-button:focus {
+.button-main:hover,
+.button-main:focus {
     background-color: var(--color-button-hover);
 }
 
@@ -578,7 +590,7 @@ img {
 
 
 /* ================ Кнопка ОТПРАВИТЬ в модалке ================= */
-.hero-button.btn-modal {
+.button-main.btn-modal {
     display: block;
     margin-top: 30px;
     margin-left: auto;
@@ -942,40 +954,79 @@ img {
 
 
 /* =============================== Стилизация footer =============================== */
-/* ==== flex-контейнер в footer (foot) ===== */
-.foot {
-    display: flex;
+/* ==== flex-контейнер в footer (container flex) ===== */
 
-    /* УБРАТЬ */
-    /* outline: 2px solid tomato;  */
-    /* background-color: rgb(43, 75, 64); */
+/* ====== Цвет фона в footer ====== */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--color-background-footer);
 }
 
-.footers-addresses {
+.footer__address {
 
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 
-.footers-soc {
+/* == Замена цвета текста WebStudio (часть Studio - на белую) в footer == */
+.logo__left--light {
+    color: var(--color-light);
+}
+
+/* Применить отступ margin-bottom: 20px к элементу LOGO */
+.footers__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+/* ============= Стилизация АДРЕС в footer ============= */
+.footer__address-link {
+    font-style: normal;
+    line-height: 1.71;
+
+    color: var(--color-light);
+}
+
+/* ======== Стилизация (почта и телефон) в footer ======== */
+.footer__contact-link {
+    font-style: normal;
+    line-height: 1.71;
+
+    color: var(--color-font-footer);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======  Hover & Focus на ссылках (почта и телефон) в footer ===== */
+.footer__contact-link:hover,
+.footer__contact-link:focus {
+    color: var(--color-logo-links-hover);
+}
+
+/* Применить margin-bottom: 9px ко всем элементам с классом footer__address-item,
+кроме последнего */
+.footer__address-item:not(:last-child) {
+    margin-bottom: 9px;
+
+}
+/* ==================== Стилизация Блока СОЦ СЕТИ (footer__soc) ==================== */
+.footer__soc {
     min-width: 206px;
     margin-top: 12px;
     margin-left: 70px;
-    
+
     /* outline: 2px solid rgb(40, 2, 255); */
 }
 
-/* ======================== Стилизация блока соцсети ======================== */
-.footers-soc-list {
-    display: flex;
-    justify-content: space-between;
-}
 
-.footers-soc-item {
+.footer__soc-item {
     width: 44px;
     height: 44px;
 }
 
-.footers-soc-link {
+.footer__soc-link {
     display: flex;
 
     width: 100%;
@@ -993,54 +1044,14 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footers-soc-link:hover,
-.footers-soc-link:focus {
+.footer__soc-link:hover,
+.footer__soc-link:focus {
     background-color: var(--color-logo-links-hover);
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* ====== Цвет фона в footer ====== */
-.footers {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    background-color: var(--color-background-footer);
-}
-
-
-/* == Замена цвета текста WebStudio (часть Studio - на белую) в footer == */
-.logo__left--light {
-    color: var(--color-light);
-}
-/* Применить margin-bottom: 20px к элементу LOGO */
-.footers__logo {
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-
-
-/* ============= Стилизация ВСЕХ строк Блока АДРЕС в footer ============= */
-.addresses {
-    font-style: normal;
-    line-height: 1.71;
-
-    color: var(--color-light);
-}
-
-/* == Изменение цвета шрифта (почта и телефон) в Блоке АДРЕС  в footer == */
-.footers-contact-link {
-    font-style: normal;
-    line-height: 1.71;
-
-    color: var(--color-font-footer);
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ======== Ститлизация текста в блоке СОЦСЕТИ (footers-soc)========== */
-.footers-soc-titles {
+/* ======== Ститлизация текста в Блоке СОЦ СЕТИ (footer__soc) ========== */
+.footer__soc-titles {
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -1051,25 +1062,12 @@ img {
 }
 
 
-/* ======  Hover & Focus на ссылках (почта и телефон) в footer ===== */
-.footers-contact-link:hover,
-.footers-contact-link:focus {
-    color: var(--color-logo-links-hover);
-}
 
 
 
-
-
-/* Применить margin-bottom: 9px ко всем элементам с классом list-item,
-кроме последнего */
-.list-item:not(:last-child) {
-    margin-bottom: 9px;
-    
-}
 
 /* ======================== Стилизация формы ПОДПИСАТЬСЯ ======================== */
-.footers-subscription {
+.footer__subscr {
     margin-left: 93px;
     padding-top: 12px;
 
@@ -1078,16 +1076,14 @@ img {
     /* background-color: tomato; */
 }
 
-.footers-field-wrap {
-    display: flex;
-    align-items: center;
+.footer__field-wrap--margin {
     margin-top: 15px;
 
     /* outline: 2px solid rgb(71, 58, 250); */
 }
 
 /* +++++++++++ Стили ПЛЕЙСХОЛДЕРА +++++++++++ */
-.footers-input::placeholder {
+.footer__input::placeholder {
         font-size: 16px;
         line-height: 1.25;
     
@@ -1095,7 +1091,7 @@ img {
 }
 /* +++++++++++++++++++++++++++++++++ */
 
-.footers-input {
+.footer__input {
     width: 358px;
     height: 50px;
 
@@ -1114,24 +1110,24 @@ img {
 
 }
 
-
-.btn-footers.hero-button {
+/* btn-footers.button-main */
+.footer__btn {
     position: relative;
-    margin-left: 12px;
-    padding-left: 29px;
-    text-align: left;
-}
 
-
-.btn-footers {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
+    margin-left: 12px;
+    padding-left: 29px;
+
+    text-align: left;
+
 }
 
 
-.footers-icon {
+.footer__icon {
     margin-left: 10px;
 
     fill: var(--color-light);
