@@ -1,0 +1,59 @@
+/* =============================  ОСНОВНОЙ Контейнер (container) ============================= */
+.container {
+    width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato;  */
+    /* background-color: tomato; */
+}
+
+/* ============================= Контейнер для ФОНА в ГЕРОЙ (overlay) ============================= */
+.overlay {
+    max-width: 1600px;
+    height: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image:
+        linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/bck-img.jpg");
+    /* background-image: url("../images/bck-img.jpg"); */
+
+    background-color: var(--color-background-footer);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* outline: 2px solid tomato;  */
+}
+
+/* ============================= flex - контейнеры (________) ============================= */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-spacebetween-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

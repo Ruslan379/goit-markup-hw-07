@@ -1,4 +1,18 @@
-body {
-    // color: red;
-    // background-color: rgb(142, 245, 219);
-}
+@import "./utils/variables";
+@import "./base/reset";
+@import "./base/common";
+@import "./utils/hidden";
+
+@import "./components/container";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/title";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/activities";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/projects";
+@import "./layout/footer";
