@@ -177,6 +177,7 @@ img {
 
 /* ============ Стилизация логотипа WebStudio in header ============ */
 .logo {
+    display: inline-block;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -976,7 +977,7 @@ img {
 
 /* Применить отступ margin-bottom: 20px к элементу LOGO */
 .footers__logo {
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 20px;
 }
 
