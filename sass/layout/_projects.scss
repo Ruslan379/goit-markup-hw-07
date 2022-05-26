@@ -1,5 +1,17 @@
-/* =========== Стилизация секции ГЕРОЙ-ПОРТФОЛИО (projects) в portfolio.html =========== */
+/* == Выделение цветом активной кнопки в ГЕРОЙ-ССЫЛКИ в (btn-filters) в portfolio.html === */
+.btn-filters.activlink {
+    background-color: var(--color-button-hover);
+    color: var(--color-light);
+}
 
+
+/* ____________  К О Н Е Ц кнопки в ГЕРОЙ-ССЫЛКИ в portfolio.html ______________________ */
+
+
+
+
+
+/* =========== Стилизация секции ГЕРОЙ-ПОРТФОЛИО (projects) в portfolio.html =========== */
 
 /* ==== flex-контейнер для кнопок в ГЕРОЙ-ССЫЛКИ (filters-list) ===== */
 .filters-list {

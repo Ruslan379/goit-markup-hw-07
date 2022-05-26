@@ -488,7 +488,7 @@
             <div class="footer__subscr">
                 <form>
                         <label for="users-email" class="footer__soc-titles">Подпишитесь на рассылку</label>
-                        <div class="footer__field-wrap footer__field-wrap--margin flex-center">
+                        <div class="footer__field footer__field--margin flex-center">
                             <input 
                                 type="email" 
                                 class="footer__input" 
@@ -609,26 +609,7 @@
     </div>
 
     <!-- ================== Скрипт js для модалки ======================= -->
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        refs.backdrop.addEventListener("click", logBackdropClick);
-
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-
-        function logBackdropClick() {
-            console.log("Это клик в бекдроп");
-        }
-    </script>
+    <script src="./js/modal.js"></script>
 
 </body>
 
