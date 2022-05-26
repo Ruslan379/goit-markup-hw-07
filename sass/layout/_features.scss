@@ -21,25 +21,34 @@
 
 .features-item {
     width: calc((100% - 90px) / 3);
+        &::before {
+        content: "";
+        display: block;
+        height: 120px;
 
-    /* УБРАТЬ */
-    /* background-color: tomato; */
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--color-background-team);
+
+    }
 }
 
 /* ============== Иконки в Секции Наши особенности (features) =============== */
-.features-item::before {
-    content: "";
-    display: block;
-    height: 120px;
+// .features-item::before {
+//     content: "";
+//     display: block;
+//     height: 120px;
 
-    background-size: 70px 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--color-background-team);
+//     background-size: 70px 70px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-color: var(--color-background-team);
 
-    /* УБРАТЬ */
-    /* outline: 2px solid tomato;  */
-}
+//     /* УБРАТЬ */
+//     /* outline: 2px solid tomato;  */
+// }
+// ______________________________________________________________
 
 .icon-features-first::before {
     background-image: url("../images/antenna1.svg");
